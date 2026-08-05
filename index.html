@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexandr Shaihiev — Information Security Specialist</title>
+<meta name="description" content="Alexandr Shaihiev — Information Security &amp; IT Infrastructure Specialist. Network security, firewalls, Linux hardening, enterprise IT.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="logo">A<span class="logo-slash">/</span>S</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#about" data-i18n="nav.about">Обо мне</a>
+      <a href="#skills" data-i18n="nav.skills">Навыки</a>
+      <a href="#experience" data-i18n="nav.experience">Опыт</a>
+      <a href="#certifications" data-i18n="nav.certifications">Сертификаты</a>
+      <a href="#contact" data-i18n="nav.contact">Контакты</a>
+    </nav>
+    <div class="lang-switch" id="langSwitch" role="group" aria-label="Язык / Language">
+      <button type="button" class="lang-btn active" data-lang="ru">RU</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <a class="btn btn-primary btn-sm" data-resume-link download>
+      <span data-i18n="header.download">Скачать резюме</span> <span class="icon-download">&#8595;</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text reveal">
+        <p class="eyebrow"><span class="rule"></span> <span data-i18n="hero.eyebrow">ЗДРАВСТВУЙТЕ, Я</span></p>
+        <h1 class="hero-name">ALEXANDR<br>SHAIHIEV</h1>
+        <p class="hero-role">INFORMATION SECURITY SPECIALIST</p>
+        <p class="hero-desc" data-i18n="hero.desc">Специалист по информационной безопасности и IT-инфраструктуре с опытом 8+ лет: NGFW, VPN/крипто-шлюзы, hardening Linux, сетевая безопасность корпоративного уровня. Открыт к релокации в любую страну.</p>
+        <div class="hero-cta">
+          <a href="#experience" class="btn btn-primary"><span data-i18n="hero.ctaExperience">Посмотреть опыт</span> <span class="arrow">&#8594;</span></a>
+          <a href="#contact" class="btn btn-outline" data-i18n="hero.ctaContact">Связаться</a>
+        </div>
+        <div class="hero-meta">
+          <span data-i18n="hero.metaLocation">Санкт-Петербург, Россия</span>
+          <span class="dot">&bull;</span>
+          <span data-i18n="hero.metaRelocation">Открыт к релокации в любую страну</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-frame">
+          <img class="hero-photo" src="assets/portrait.jpg" alt="Александр Шайхиев">
+          <div class="frame-monogram">A/S</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-divider"></div>
+  </section>
+
+  <!-- ABOUT + QUICK FACTS -->
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div class="reveal">
+        <p class="eyebrow"><span class="rule"></span> <span data-i18n="about.eyebrow">ОБО МНЕ</span></p>
+        <h2 class="section-title" data-i18n="about.title">Безопасность и инфраструктура<br>— моя специализация.</h2>
+        <p class="section-text" data-i18n="about.text">
+          Более 8 лет практического опыта в сетевой безопасности, системном администрировании и корпоративной IT-поддержке.
+          Сегодня фокус — развёртывание и hardening защитной инфраструктуры для корпоративных клиентов: межсетевые экраны нового поколения,
+          зашифрованные VPN/крипто-шлюзы и защищённые Linux-серверы. Уверенная база в администрировании Windows/Linux, корпоративных сетях
+          (VLAN/ACL, L2/L3) и полном цикле ввода инфраструктуры в эксплуатацию.
+        </p>
+        <a data-resume-link download class="btn btn-primary btn-sm" data-i18n="about.download">Скачать полное резюме</a>
+      </div>
+
+      <div class="reveal">
+        <p class="eyebrow"><span class="rule"></span> <span data-i18n="about.factsEyebrow">КОРОТКО</span></p>
+        <div class="facts-list">
+          <div class="fact-row">
+            <span class="fact-label" data-i18n="about.factExperienceLabel">Опыт</span>
+            <span class="fact-value" data-i18n="about.factExperienceValue">8+ лет в ИБ и IT-инфраструктуре</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label" data-i18n="about.factLocationLabel">Локация</span>
+            <span class="fact-value" data-i18n="about.factLocationValue">Санкт-Петербург, Россия</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label" data-i18n="about.factRelocationLabel">Релокация</span>
+            <span class="fact-value" data-i18n="about.factRelocationValue">Готов к переезду в любую страну</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label" data-i18n="about.factLangLabel">Языки</span>
+            <span class="fact-value" data-i18n="about.factLangValue">Русский — родной, English — B2</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label" data-i18n="about.factLicenseLabel">Права</span>
+            <span class="fact-value" data-i18n="about.factLicenseValue">Категория B</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <p class="eyebrow"><span class="rule"></span> <span data-i18n="skills.eyebrow">НАВЫКИ</span></p>
+      <h2 class="section-title" data-i18n="skills.title">Ключевые компетенции.</h2>
+
+      <div class="skills-columns">
+        <div class="skills-col reveal">
+          <h3 class="skills-col-title" data-i18n="skills.col1Title">Сеть и безопасность</h3>
+          <ul class="skill-list">
+            <li><svg class="skill-ic" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3z"/></svg> <span data-i18n="skills.col1Item1">Развёртывание и управление политиками NGFW</span></li>
+            <li><svg class="skill-ic" viewBox="0 0 24 24"><path d="M4 12h4l3-8 4 16 3-8h4"/></svg> <span data-i18n="skills.col1Item2">Администрирование VPN / крипто-шлюзов</span></li>
+            <li><svg class="skill-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18"/></svg> <span data-i18n="skills.col1Item3">Hardening сетей, VLAN/ACL, L2/L3 коммутация</span></li>
+            <li><svg class="skill-ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18"/></svg> <span data-i18n="skills.col1Item4">PKI и криптографическая инфраструктура</span></li>
+            <li><svg class="skill-ic" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg> <span data-i18n="skills.col1Item5">Incident response и root-cause troubleshooting</span></li>
+          </ul>
+        </div>
+
+        <div class="skills-col reveal">
+          <h3 class="skills-col-title" data-i18n="skills.col2Title">Системное администрирование</h3>
+          <ul class="skill-list">
+            <li><svg class="skill-ic" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="7" rx="1"/><rect x="4" y="14" width="16" height="7" rx="1"/><circle cx="8" cy="6.5" r="0.8"/><circle cx="8" cy="17.5" r="0.8"/></svg> <span data-i18n="skills.col2Item1">Администрирование серверов и клиентов Windows &amp; Linux</span></li>
+            <li><svg class="skill-ic" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3z"/></svg> <span data-i18n="skills.col2Item2">Hardening Enterprise Linux и compliance</span></li>
+            <li><svg class="skill-ic" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg> <span data-i18n="skills.col2Item3">Системы хранения (DSS), виртуализация и гипервизоры</span></li>
+            <li><svg class="skill-ic" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg> <span data-i18n="skills.col2Item4">Поддержка среды Active Directory</span></li>
+          </ul>
+        </div>
+
+        <div class="skills-col reveal">
+          <h3 class="skills-col-title" data-i18n="skills.col3Title">Сети и инфраструктура</h3>
+          <ul class="skill-list">
+            <li><svg class="skill-ic" viewBox="0 0 24 24"><rect x="2" y="10" width="20" height="6" rx="1"/><circle cx="6" cy="13" r="0.8"/><circle cx="10" cy="13" r="0.8"/></svg> <span data-i18n="skills.col3Item1">Сетевое оборудование (MikroTik, L2/L3-коммутаторы)</span></li>
+            <li><svg class="skill-ic" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 4v16M16 4v16M4 8h16M4 16h16"/></svg> <span data-i18n="skills.col3Item2">Структурированные кабельные системы, монтаж стоек</span></li>
+            <li><svg class="skill-ic" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0"/><path d="M12 12l4-4"/><circle cx="12" cy="19" r="1.5"/></svg> <span data-i18n="skills.col3Item3">Мониторинг и автоматизация (Zabbix, Tactical RMM)</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <div class="section-head-row">
+        <p class="eyebrow"><span class="rule"></span> <span data-i18n="experience.eyebrow">ОПЫТ РАБОТЫ</span></p>
+        <h2 class="section-title" data-i18n="experience.title">Карьерный путь.</h2>
+      </div>
+
+      <div class="timeline">
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date" data-i18n="exp.1.date">Июнь 2025 — настоящее время</div>
+          <div class="timeline-body">
+            <h3 data-i18n="exp.1.role">Специалист по информационной безопасности</h3>
+            <p class="timeline-company" data-i18n="exp.1.company">Gazinformservice Certification Center LLC — Санкт-Петербург</p>
+            <ul>
+              <li data-i18n="exp.1.b1">Развёртывание и поддержка защитной сетевой инфраструктуры: NGFW, зашифрованные VPN/крипто-шлюзы для корпоративных клиентов</li>
+              <li data-i18n="exp.1.b2">Администрирование и hardening корпоративных Linux-серверов под требования compliance</li>
+              <li data-i18n="exp.1.b3">Управление системами хранения, файрволами и сетевым оборудованием клиентской инфраструктуры</li>
+              <li data-i18n="exp.1.b4">Полный цикл (PnP) ввода в эксплуатацию защитной инфраструктуры для корпоративных проектов</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date" data-i18n="exp.2.date">Авг 2024 — Июнь 2025</div>
+          <div class="timeline-body">
+            <h3 data-i18n="exp.2.role">Системный администратор</h3>
+            <p class="timeline-company" data-i18n="exp.2.company">ITart LLC — Санкт-Петербург</p>
+            <ul>
+              <li data-i18n="exp.2.b1">Удалённая и выездная техническая поддержка в средах Windows и Linux</li>
+              <li data-i18n="exp.2.b2">Внедрение мониторинга и автоматизации (Zabbix, Tactical RMM), сокращение времени реагирования</li>
+              <li data-i18n="exp.2.b3">Администрирование корпоративных сетей, серверов и офисного IT-оборудования</li>
+              <li data-i18n="exp.2.b4">Прокладка структурированных кабельных сетей и монтаж физической инфраструктуры</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date" data-i18n="exp.3.date">Апр 2024 — Авг 2024</div>
+          <div class="timeline-body">
+            <h3 data-i18n="exp.3.role">Инженер по техническому обслуживанию</h3>
+            <p class="timeline-company" data-i18n="exp.3.company">ГБУ ДЮЦС Московского района (спортивный центр) — Санкт-Петербург</p>
+            <ul>
+              <li data-i18n="exp.3.b1">Поддержка бесперебойной работы СКУД, IP/аналогового видеонаблюдения и AV-систем объекта</li>
+              <li data-i18n="exp.3.b2">Обслуживание 46 рабочих мест (десктопы, ноутбуки, моноблоки, мини-ПК)</li>
+              <li data-i18n="exp.3.b3">Администрирование ПО для шифрованной связи и электронной подписи для compliance-процессов</li>
+              <li data-i18n="exp.3.b4">Техническая закупка в рамках регламентов госсектора</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date" data-i18n="exp.4.date">Ноя 2021 — Фев 2024</div>
+          <div class="timeline-body">
+            <h3 data-i18n="exp.4.role">Ведущий системный администратор поддержки</h3>
+            <p class="timeline-company" data-i18n="exp.4.company">Wildberries LLC — Санкт-Петербург</p>
+            <ul>
+              <li data-i18n="exp.4.b1">Развёртывание и настройка систем видеонаблюдения, сканеров и принтеров в мультиплощадочной розничной сети</li>
+              <li data-i18n="exp.4.b2">Администрирование Windows/Linux систем и сетевых дисков в распределённых локациях</li>
+              <li data-i18n="exp.4.b3">Настройка и поддержка сетевого оборудования на точках выдачи</li>
+              <li data-i18n="exp.4.b4">Организация сетевой инфраструктуры и обслуживание периферии для розничных операций</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date" data-i18n="exp.5.date">Авг 2019 — Ноя 2020</div>
+          <div class="timeline-body">
+            <h3 data-i18n="exp.5.role">Тимлид отдела разработки 3D-персонажей</h3>
+            <p class="timeline-company" data-i18n="exp.5.company">Magic Hazard Studio — Санкт-Петербург</p>
+            <ul>
+              <li data-i18n="exp.5.b1">Руководство командой из 2 человек в производстве персонажей для игровых проектов студии</li>
+              <li data-i18n="exp.5.b2">Разработка дизайнов персонажей, повысивших вовлечённость и просмотры платформы</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date" data-i18n="exp.6.date">Янв 2017 — Май 2018</div>
+          <div class="timeline-body">
+            <h3 data-i18n="exp.6.role">Наладчик станков с ЧПУ и манипуляторов</h3>
+            <p class="timeline-company" data-i18n="exp.6.company">ПАО «КАМАЗ» — Набережные Челны</p>
+            <ul>
+              <li data-i18n="exp.6.b1">Контроль работы ЧПУ-станков в полном цикле металлообработки</li>
+              <li data-i18n="exp.6.b2">Диагностика и исправление ошибок G-кода по технической документации</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date" data-i18n="exp.7.date">Ноя 2014 — Июн 2015</div>
+          <div class="timeline-body">
+            <h3 data-i18n="exp.7.role">Наладчик ЧПУ (стажировка)</h3>
+            <p class="timeline-company" data-i18n="exp.7.company">АО «ПТФК ЗТЭО» — Набережные Челны</p>
+            <ul>
+              <li data-i18n="exp.7.b1">Участие в сборке электрооборудования и электродвигателей</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS + EDUCATION -->
+  <section id="certifications" class="certifications">
+    <div class="container">
+      <p class="eyebrow"><span class="rule"></span> <span data-i18n="certifications.eyebrow">ОБРАЗОВАНИЕ И СЕРТИФИКАТЫ</span></p>
+      <h2 class="section-title" data-i18n="certifications.title">Квалификация.</h2>
+
+      <div class="cert-grid">
+        <a class="cert-card reveal" href="assets/certificates/efros-do-na-2026.pdf" target="_blank" rel="noopener">
+          <span class="cert-year">2026</span>
+          <h4>Administration of Efros Defence Operations</h4>
+          <p>Network Assurance Module</p>
+        </a>
+        <a class="cert-card reveal" href="assets/certificates/astra-linux-rusbitech-2025.pdf" target="_blank" rel="noopener">
+          <span class="cert-year">2025</span>
+          <h4>Astra Linux Special Edition 1.8 Administration, AL-1802</h4>
+          <p>rusBITech-Astra</p>
+        </a>
+        <a class="cert-card reveal" href="assets/certificates/astra-linux-softline-2025.pdf" target="_blank" rel="noopener">
+          <span class="cert-year">2025</span>
+          <h4>Astra Linux Special Edition 1.8 Administration</h4>
+          <p>Softline</p>
+        </a>
+        <a class="cert-card reveal" href="assets/certificates/cpp-skillbox-2024.pdf" target="_blank" rel="noopener">
+          <span class="cert-year">2023–2024</span>
+          <h4>C++ Development: Microcontrollers, Desktop &amp; Mobile</h4>
+          <p>Skillbox</p>
+        </a>
+      </div>
+
+      <div class="education-block reveal">
+        <div class="edu-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+        </div>
+        <div>
+          <h4 data-i18n="edu.name">Набережночелнинский политехнический колледж</h4>
+          <p data-i18n="edu.desc">Информационные технологии и машиностроение — Диплом специалиста, 2017. Квалификация: наладчик станков с ЧПУ и манипуляторов</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section id="contact" class="contact-cta">
+    <div class="container contact-inner">
+      <div class="compass reveal" aria-hidden="true">
+        <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" fill="none" stroke="currentColor" stroke-width="1"/><path d="M30 10 L36 30 L30 50 L24 30 Z" fill="currentColor" opacity="0.85"/></svg>
+      </div>
+      <h2 class="cta-title reveal" data-i18n="contact.title">ДАВАЙТЕ ОБСУДИМ ВАШ ПРОЕКТ</h2>
+      <p class="cta-text reveal" data-i18n="contact.text">Открыт к предложениям по релокации в любую страну и к проектам в сфере информационной безопасности.</p>
+      <div class="contact-links reveal">
+        <a href="mailto:amosemptines@yandex.ru" class="contact-link">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          amosemptines@yandex.ru
+        </a>
+        <a href="tel:+79643348777" class="contact-link">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.3z"/></svg>
+          +7 964 334 8777
+        </a>
+      </div>
+      <button type="button" id="openContactModal" class="btn btn-primary contact-btn reveal"><span data-i18n="contact.btn">Написать мне</span> <span class="arrow">&#8594;</span></button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; 2026 Alexandr Shaihiev</span>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="contactModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button type="button" class="modal-close" id="modalClose" aria-label="Закрыть">&times;</button>
+    <p class="eyebrow"><span class="rule"></span> <span data-i18n="modal.eyebrow">НАПИСАТЬ МНЕ</span></p>
+    <h3 id="modalTitle" class="modal-title" data-i18n="modal.title">Свяжитесь со мной</h3>
+    <p class="modal-desc" data-i18n="modal.desc">Сообщение уйдёт сразу на два адреса:</p>
+    <div class="modal-emails">
+      <span class="modal-email-chip">amosemptines@gmail.com</span>
+      <span class="modal-email-chip">amosemptines@yandex.ru</span>
+    </div>
+    <form id="contactForm" class="contact-form" novalidate>
+      <label class="form-field">
+        <span data-i18n="modal.yourEmail">Ваш email для ответа</span>
+        <input type="email" id="senderEmail" required placeholder="you@example.com">
+      </label>
+      <label class="form-field">
+        <span data-i18n="modal.message">Сообщение</span>
+        <textarea id="messageText" rows="5" required></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary modal-submit">
+        <span data-i18n="modal.send">Отправить</span> <span class="arrow">&#8594;</span>
+      </button>
+      <p class="modal-note" data-i18n="modal.note">Откроется ваше почтовое приложение с уже готовым письмом — останется нажать «Отправить».</p>
+    </form>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
