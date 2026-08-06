@@ -32,7 +32,7 @@ const translations = {
     'nav.experience': 'Опыт',
     'nav.certifications': 'Сертификаты',
     'nav.contact': 'Контакты',
-    'header.download': 'Скачать резюме',
+    'header.contact': 'Связаться',
 
     'hero.eyebrow': 'ЗДРАВСТВУЙТЕ, Я',
     'hero.role': 'REMOTE IT INFRASTRUCTURE &amp; SECURITY CONSULTANT',
@@ -45,7 +45,7 @@ const translations = {
     'about.eyebrow': 'ОБО МНЕ',
     'about.title': 'Инфраструктура и безопасность<br>для бизнеса любого масштаба.',
     'about.text': '8+ лет практического опыта в сетевой безопасности, системном администрировании и IT-консалтинге. Работаю удалённо с бизнесом любой структуры — от небольшого офиса до распределённой сети филиалов: проектирование и внедрение сетевой инфраструктуры, hardening серверов, подбор и закупка оборудования, аудит и документирование процессов. Гибко подключаюсь к проекту — разово, по проекту или на постоянной основе.',
-    'about.download': 'Скачать полное резюме',
+    'about.download': 'Обсудить проект',
     'about.factsEyebrow': 'КОРОТКО',
     'about.factExperienceLabel': 'Опыт',
     'about.factExperienceValue': '8+ лет в ИБ и IT-инфраструктуре',
@@ -85,6 +85,10 @@ const translations = {
     'services.card4B3': 'Поддержка compliance и регламентов',
     'services.card4B4': 'Взаимодействие с поставщиками и подрядчиками',
 
+    'console.eyebrow': 'НА ПРАКТИКЕ',
+    'console.title': 'Как это выглядит в консоли.',
+    'console.intro': 'Пример типовых команд при настройке firewall, VPN и мониторинга — так проходит рабочий день удалённо.',
+
     'solutions.eyebrow': 'РЕШЕНИЯ',
     'solutions.title': 'Как выглядят мои решения.',
     'solutions.intro': 'Ниже — типовые архитектуры, которые я проектирую и сопровождаю удалённо: от одного офиса до сети из нескольких площадок.',
@@ -114,6 +118,25 @@ const translations = {
     'solutions.medium.branch2Title': 'Филиал 2',
     'solutions.medium.branch2Meta': 'Только пользователи',
     'solutions.medium.branch2Desc': 'Использует ресурсы HQ через VPN',
+    'solutions.l2.heading': 'Малый бизнес — физическое подключение (L2)',
+    'solutions.l2.caption': 'Как оборудование физически соединено в стойке: от ввода интернета до розеток в офисе.',
+    'solutions.l2.isp': 'Ввод интернета (ISP)',
+    'solutions.l2.ispSub': 'Медиаконвертер / ONT · SFP',
+    'solutions.l2.router': 'Маршрутизатор',
+    'solutions.l2.routerSub': 'WAN: SFP/RJ45 · LAN: 1×RJ45 uplink',
+    'solutions.l2.switchTitle': 'Коммутатор L2, 8 портов',
+    'solutions.l2.switchSub': '1: Router · 2: Сервер · 3: AP · 4–8: Патч-панель',
+    'solutions.l2.patchTitle': 'Патч-панель',
+    'solutions.l2.patchMeta': 'Порты 4–8',
+    'solutions.l2.patchDesc': 'Розетки: каб. 101, 102, ресепшн',
+    'solutions.l2.serverTitle': 'Сервер',
+    'solutions.l2.serverMeta': 'Порт 2 — прямое подключение',
+    'solutions.l2.serverDesc': 'Файловый / прикладной сервер',
+    'solutions.l2.apTitle': 'Точка доступа Wi-Fi',
+    'solutions.l2.apMeta': 'Порт 3',
+    'solutions.l2.apDesc': 'Гостевой и рабочий SSID',
+    'solutions.l2.legendUtp': 'UTP Cat6',
+    'solutions.l2.legendFiber': 'Оптика / SFP',
 
     'experience.eyebrow': 'ОПЫТ РАБОТЫ',
     'experience.title': 'Карьерный путь.',
@@ -191,7 +214,7 @@ const translations = {
     'nav.experience': 'Experience',
     'nav.certifications': 'Certifications',
     'nav.contact': 'Contact',
-    'header.download': 'Download Resume',
+    'header.contact': 'Get in Touch',
 
     'hero.eyebrow': "HELLO, I'M",
     'hero.role': 'REMOTE IT INFRASTRUCTURE &amp; SECURITY CONSULTANT',
@@ -204,7 +227,7 @@ const translations = {
     'about.eyebrow': 'ABOUT ME',
     'about.title': 'Infrastructure and security<br>for businesses of any scale.',
     'about.text': '8+ years of hands-on experience in network security, systems administration, and IT consulting. I work remotely with businesses of any structure — from a small office to a distributed branch network: network infrastructure design and deployment, server hardening, equipment sourcing and procurement, process audit and documentation. Flexible engagement — one-off tasks, project-based, or ongoing support.',
-    'about.download': 'Download Full Resume',
+    'about.download': 'Discuss a Project',
     'about.factsEyebrow': 'AT A GLANCE',
     'about.factExperienceLabel': 'Experience',
     'about.factExperienceValue': '8+ years in InfoSec & IT infrastructure',
@@ -244,6 +267,10 @@ const translations = {
     'services.card4B3': 'Compliance support',
     'services.card4B4': 'Vendor & contractor coordination',
 
+    'console.eyebrow': 'IN PRACTICE',
+    'console.title': 'What it looks like in the console.',
+    'console.intro': "Typical commands for configuring firewalls, VPNs, and monitoring — a slice of a remote workday.",
+
     'solutions.eyebrow': 'SOLUTIONS',
     'solutions.title': 'What my solutions look like.',
     'solutions.intro': 'Below are typical architectures I design and support remotely — from a single office to a multi-site branch network.',
@@ -273,6 +300,25 @@ const translations = {
     'solutions.medium.branch2Title': 'Branch 2',
     'solutions.medium.branch2Meta': 'Users only',
     'solutions.medium.branch2Desc': 'Relies on HQ resources over VPN',
+    'solutions.l2.heading': 'Small Business — Physical Connectivity (L2)',
+    'solutions.l2.caption': 'How the equipment is physically wired in the rack: from the ISP entry point to the office wall outlets.',
+    'solutions.l2.isp': 'ISP Entry',
+    'solutions.l2.ispSub': 'Media converter / ONT · SFP',
+    'solutions.l2.router': 'Router',
+    'solutions.l2.routerSub': 'WAN: SFP/RJ45 · LAN: 1×RJ45 uplink',
+    'solutions.l2.switchTitle': 'L2 Switch, 8 ports',
+    'solutions.l2.switchSub': '1: Router · 2: Server · 3: AP · 4–8: Patch Panel',
+    'solutions.l2.patchTitle': 'Patch Panel',
+    'solutions.l2.patchMeta': 'Ports 4–8',
+    'solutions.l2.patchDesc': 'Wall outlets: Room 101, 102, Reception',
+    'solutions.l2.serverTitle': 'Server',
+    'solutions.l2.serverMeta': 'Port 2 — direct connection',
+    'solutions.l2.serverDesc': 'File / application server',
+    'solutions.l2.apTitle': 'Wi-Fi Access Point',
+    'solutions.l2.apMeta': 'Port 3',
+    'solutions.l2.apDesc': 'Guest and staff SSID',
+    'solutions.l2.legendUtp': 'UTP Cat6',
+    'solutions.l2.legendFiber': 'Fiber / SFP',
 
     'experience.eyebrow': 'WORK EXPERIENCE',
     'experience.title': 'Career Path.',
@@ -345,13 +391,7 @@ const translations = {
   }
 };
 
-const resumeFiles = {
-  ru: 'assets/Alexandr_Shaihiev_Resume_RU.pdf',
-  en: 'assets/Alexandr_Shaihiev_Resume_EN.pdf'
-};
-
 const i18nEls = document.querySelectorAll('[data-i18n]');
-const resumeLinks = document.querySelectorAll('[data-resume-link]');
 const langButtons = document.querySelectorAll('.lang-btn');
 
 function setLanguage(lang) {
@@ -364,8 +404,6 @@ function setLanguage(lang) {
     const key = el.getAttribute('data-i18n');
     if (dict[key] !== undefined) el.innerHTML = dict[key];
   });
-
-  resumeLinks.forEach(a => a.setAttribute('href', resumeFiles[lang]));
 
   langButtons.forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
@@ -383,7 +421,7 @@ setLanguage(savedLang === 'en' ? 'en' : 'ru');
 
 // ---------- Contact modal ----------
 const contactModal = document.getElementById('contactModal');
-const openContactModal = document.getElementById('openContactModal');
+const openContactButtons = document.querySelectorAll('.js-open-contact');
 const modalClose = document.getElementById('modalClose');
 const contactForm = document.getElementById('contactForm');
 const senderEmail = document.getElementById('senderEmail');
@@ -404,9 +442,7 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-if (openContactModal) {
-  openContactModal.addEventListener('click', openModal);
-}
+openContactButtons.forEach(btn => btn.addEventListener('click', openModal));
 modalClose.addEventListener('click', closeModal);
 contactModal.addEventListener('click', (e) => {
   if (e.target === contactModal) closeModal();
@@ -429,3 +465,114 @@ contactForm.addEventListener('submit', (e) => {
   closeModal();
   contactForm.reset();
 });
+
+// ---------- Terminal demo ----------
+const terminalBody = document.getElementById('terminalBody');
+
+const terminalCommands = [
+  {
+    cmd: 'firewall forward add rule "PC_ADMIN_TO_SERVER_DLP" src 10.0.35.10 dst 192.168.2.5 tcp dport 22 pass',
+    output: ['[ok] rule added: PC_ADMIN_TO_SERVER_DLP (id: 482)']
+  },
+  {
+    cmd: 'vpn gateway show status',
+    output: ['[ok] site-to-site tunnel HQ<->Branch1: ESTABLISHED (IKEv2, AES256-GCM)']
+  },
+  {
+    cmd: 'systemctl status sshd',
+    output: ['● sshd.service - active (running)']
+  },
+  {
+    cmd: 'zabbix_agent check disk /var',
+    output: ['[ok] 62% used, 38% free']
+  },
+  {
+    cmd: 'firewall forward add rule "OFFICE_TO_INTERNET_DNS" src 10.0.101.0/24 dst any udp dport 53 pass',
+    output: ['[ok] rule added: OFFICE_TO_INTERNET_DNS (id: 483)']
+  }
+];
+
+function startTerminal() {
+  if (!terminalBody) return;
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reducedMotion) {
+    terminalCommands.forEach(entry => {
+      const line = document.createElement('div');
+      line.className = 'term-line';
+      line.innerHTML = `<span class="term-prompt">~$ </span><span class="term-cmd">${entry.cmd}</span>`;
+      terminalBody.appendChild(line);
+      entry.output.forEach(out => {
+        const outLine = document.createElement('div');
+        outLine.className = 'term-output ok';
+        outLine.textContent = out;
+        terminalBody.appendChild(outLine);
+      });
+    });
+    return;
+  }
+
+  const cursor = document.createElement('span');
+  cursor.className = 'term-cursor';
+
+  let cmdIndex = 0;
+
+  function trimHistory() {
+    while (terminalBody.children.length > 16) {
+      terminalBody.removeChild(terminalBody.firstChild);
+    }
+  }
+
+  function typeCommand() {
+    const entry = terminalCommands[cmdIndex % terminalCommands.length];
+    const line = document.createElement('div');
+    line.className = 'term-line';
+    const prompt = document.createElement('span');
+    prompt.className = 'term-prompt';
+    prompt.textContent = '~$ ';
+    const cmdSpan = document.createElement('span');
+    cmdSpan.className = 'term-cmd';
+    line.appendChild(prompt);
+    line.appendChild(cmdSpan);
+    line.appendChild(cursor);
+    terminalBody.appendChild(line);
+    terminalBody.scrollTop = terminalBody.scrollHeight;
+
+    let i = 0;
+    const text = entry.cmd;
+    const typer = setInterval(() => {
+      cmdSpan.textContent += text[i];
+      i++;
+      terminalBody.scrollTop = terminalBody.scrollHeight;
+      if (i >= text.length) {
+        clearInterval(typer);
+        setTimeout(() => {
+          entry.output.forEach(out => {
+            const outLine = document.createElement('div');
+            outLine.className = 'term-output ok';
+            outLine.textContent = out;
+            terminalBody.appendChild(outLine);
+          });
+          cmdIndex++;
+          trimHistory();
+          terminalBody.scrollTop = terminalBody.scrollHeight;
+          setTimeout(typeCommand, 1600);
+        }, 350);
+      }
+    }, 26);
+  }
+
+  typeCommand();
+}
+
+const terminalObserver = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      startTerminal();
+      obs.disconnect();
+    }
+  });
+}, { threshold: 0.3 });
+
+if (terminalBody) terminalObserver.observe(terminalBody);

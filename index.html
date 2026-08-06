@@ -30,9 +30,9 @@
       <button type="button" class="lang-btn active" data-lang="ru">RU</button>
       <button type="button" class="lang-btn" data-lang="en">EN</button>
     </div>
-    <a class="btn btn-primary btn-sm" data-resume-link download>
-      <span data-i18n="header.download">Скачать резюме</span> <span class="icon-download">&#8595;</span>
-    </a>
+    <button type="button" class="btn btn-primary btn-sm js-open-contact">
+      <span data-i18n="header.contact">Связаться</span>
+    </button>
     <button class="nav-toggle" id="navToggle" aria-label="Открыть меню">
       <span></span><span></span><span></span>
     </button>
@@ -81,7 +81,7 @@
           от небольшого офиса до распределённой сети филиалов: проектирование и внедрение сетевой инфраструктуры, hardening серверов, подбор и закупка
           оборудования, аудит и документирование процессов. Гибко подключаюсь к проекту — разово, по проекту или на постоянной основе.
         </p>
-        <a data-resume-link download class="btn btn-primary btn-sm" data-i18n="about.download">Скачать полное резюме</a>
+        <button type="button" class="btn btn-primary btn-sm js-open-contact" data-i18n="about.download">Обсудить проект</button>
       </div>
 
       <div class="reveal">
@@ -178,6 +178,23 @@
     </div>
   </section>
 
+  <!-- CONSOLE DEMO -->
+  <section id="console-demo" class="console-demo">
+    <div class="container">
+      <p class="eyebrow"><span class="rule"></span> <span data-i18n="console.eyebrow">НА ПРАКТИКЕ</span></p>
+      <h2 class="section-title" data-i18n="console.title">Как это выглядит в консоли.</h2>
+      <p class="solutions-intro" data-i18n="console.intro">Пример типовых команд при настройке firewall, VPN и мониторинга — так проходит рабочий день удалённо.</p>
+
+      <div class="terminal reveal">
+        <div class="terminal-bar">
+          <span class="term-dot term-dot-a"></span><span class="term-dot term-dot-b"></span><span class="term-dot term-dot-c"></span>
+          <span class="terminal-title">ssh admin@fw-hq-01</span>
+        </div>
+        <pre class="terminal-body" id="terminalBody" aria-hidden="true"></pre>
+      </div>
+    </div>
+  </section>
+
   <!-- SOLUTIONS / SAMPLE ARCHITECTURES -->
   <section id="solutions" class="solutions">
     <div class="container">
@@ -261,6 +278,64 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="diagram-block reveal">
+        <h3 class="diagram-heading" data-i18n="solutions.l2.heading">Малый бизнес — физическое подключение (L2)</h3>
+        <p class="diagram-caption" data-i18n="solutions.l2.caption">Как оборудование физически соединено в стойке: от ввода интернета до розеток в офисе.</p>
+
+        <div class="org-chart">
+          <div class="org-node">
+            <div class="node-title" data-i18n="solutions.l2.isp">Ввод интернета (ISP)</div>
+            <div class="node-sub" data-i18n="solutions.l2.ispSub">Медиаконвертер / ONT · SFP</div>
+          </div>
+          <div class="org-link"></div>
+          <div class="org-node">
+            <div class="node-title" data-i18n="solutions.l2.router">Маршрутизатор</div>
+            <div class="node-sub" data-i18n="solutions.l2.routerSub">WAN: SFP/RJ45 · LAN: 1×RJ45 uplink</div>
+          </div>
+          <div class="org-link"></div>
+          <div class="org-node">
+            <div class="node-title" data-i18n="solutions.l2.switchTitle">Коммутатор L2, 8 портов</div>
+            <div class="port-strip" aria-hidden="true">
+              <span class="port">1</span><span class="port">2</span><span class="port">3</span><span class="port">4</span>
+              <span class="port">5</span><span class="port">6</span><span class="port">7</span><span class="port">8</span>
+            </div>
+            <div class="node-sub" data-i18n="solutions.l2.switchSub">1: Router · 2: Сервер · 3: AP · 4–8: Патч-панель</div>
+          </div>
+          <div class="org-link"></div>
+          <div class="org-children cols-3">
+            <div class="org-child">
+              <div class="org-link"></div>
+              <div class="org-card">
+                <h4 data-i18n="solutions.l2.patchTitle">Патч-панель</h4>
+                <p data-i18n="solutions.l2.patchMeta">Порты 4–8</p>
+                <p data-i18n="solutions.l2.patchDesc">Розетки: каб. 101, 102, ресепшн</p>
+              </div>
+            </div>
+            <div class="org-child">
+              <div class="org-link"></div>
+              <div class="org-card">
+                <h4 data-i18n="solutions.l2.serverTitle">Сервер</h4>
+                <p data-i18n="solutions.l2.serverMeta">Порт 2 — прямое подключение</p>
+                <p data-i18n="solutions.l2.serverDesc">Файловый / прикладной сервер</p>
+              </div>
+            </div>
+            <div class="org-child">
+              <div class="org-link"></div>
+              <div class="org-card">
+                <h4 data-i18n="solutions.l2.apTitle">Точка доступа Wi-Fi</h4>
+                <p data-i18n="solutions.l2.apMeta">Порт 3</p>
+                <p data-i18n="solutions.l2.apDesc">Гостевой и рабочий SSID</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cable-legend">
+          <span><i class="legend-line"></i> <span data-i18n="solutions.l2.legendUtp">UTP Cat6</span></span>
+          <span><i class="legend-line dashed"></i> <span data-i18n="solutions.l2.legendFiber">Оптика / SFP</span></span>
         </div>
       </div>
     </div>
@@ -437,7 +512,7 @@
           +7 964 334 8777
         </a>
       </div>
-      <button type="button" id="openContactModal" class="btn btn-primary contact-btn reveal"><span data-i18n="contact.btn">Написать мне</span> <span class="arrow">&#8594;</span></button>
+      <button type="button" class="btn btn-primary contact-btn reveal js-open-contact"><span data-i18n="contact.btn">Написать мне</span> <span class="arrow">&#8594;</span></button>
     </div>
   </section>
 

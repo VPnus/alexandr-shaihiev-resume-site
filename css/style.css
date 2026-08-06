@@ -198,6 +198,38 @@ svg{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-l
   content:'';position:absolute;left:0;top:14px;width:6px;height:1px;background:var(--green-light);
 }
 
+/* ---------- Console demo ---------- */
+.console-demo{padding:100px 0;background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.terminal{
+  margin-top:50px;border:1px solid var(--border-strong);border-radius:4px;overflow:hidden;
+  background:#0a0b09;box-shadow:0 20px 60px rgba(0,0,0,0.35);
+}
+.terminal-bar{
+  display:flex;align-items:center;gap:8px;padding:12px 16px;
+  background:var(--panel-solid);border-bottom:1px solid var(--border);
+}
+.term-dot{width:10px;height:10px;border-radius:50%;display:inline-block;background:var(--border-strong);opacity:0.6;}
+.term-dot-a{background:#c96e6e;}
+.term-dot-b{background:#c9a96e;}
+.term-dot-c{background:#6ec98a;}
+.terminal-title{
+  margin-left:8px;font-size:12px;color:var(--text-faint);letter-spacing:0.5px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+.terminal-body{
+  margin:0;padding:22px 24px;min-height:260px;max-height:340px;overflow-y:auto;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:13px;line-height:1.8;color:var(--text-dim);white-space:pre-wrap;word-break:break-all;
+}
+.term-line{color:var(--text);}
+.term-prompt{color:var(--green-light);}
+.term-cmd{color:var(--text);}
+.term-output{color:var(--text-faint);padding-left:2px;}
+.term-output.ok{color:var(--accent);}
+.term-cursor{display:inline-block;width:7px;height:14px;background:var(--accent);vertical-align:-2px;animation:term-blink 1s step-end infinite;}
+@keyframes term-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@media (prefers-reduced-motion: reduce){.term-cursor{animation:none;}}
+
 /* ---------- Solutions / sample architectures ---------- */
 .solutions{padding:100px 0;}
 .solutions-intro{color:var(--text-dim);font-size:16px;max-width:620px;margin-top:-6px;margin-bottom:60px;}
@@ -227,6 +259,18 @@ svg{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-l
 .org-card h4{font-family:var(--serif);font-size:16px;margin-bottom:9px;color:var(--accent);}
 .org-card p{font-size:13px;color:var(--text-dim);line-height:1.55;}
 .org-card p + p{margin-top:4px;color:var(--text-faint);}
+
+.port-strip{display:flex;gap:5px;justify-content:center;margin:12px 0 4px;}
+.port{
+  width:16px;height:16px;border:1px solid var(--border-strong);color:var(--accent);
+  font-size:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.cable-legend{
+  display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:34px;
+  font-size:12.5px;color:var(--text-faint);
+}
+.legend-line{display:inline-block;width:26px;height:0;border-top:2px solid var(--accent);margin-right:7px;vertical-align:middle;}
+.legend-line.dashed{border-top-style:dashed;}
 
 /* ---------- Experience timeline ---------- */
 .experience{padding:100px 0;}
@@ -367,7 +411,8 @@ svg{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-l
   .header-inner{height:70px;}
   .hero{padding-top:40px;}
   .hero-inner{padding-bottom:50px;}
-  .about,.services,.solutions,.experience,.certifications{padding:70px 0;}
+  .about,.services,.console-demo,.solutions,.experience,.certifications{padding:70px 0;}
+  .terminal-body{font-size:12px;padding:18px;min-height:220px;}
   .contact-cta{padding:80px 0;}
   .cert-grid{grid-template-columns:1fr;}
   .contact-links{flex-direction:column;gap:18px;align-items:center;}
