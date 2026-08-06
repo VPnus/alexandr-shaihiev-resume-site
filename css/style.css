@@ -61,7 +61,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-l
   display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
 .logo-slash{color:var(--accent);}
-.main-nav{display:flex;gap:36px;flex:1;justify-content:center;}
+.main-nav{display:flex;gap:22px;flex:1;justify-content:center;}
 .main-nav a{
   font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--text-dim);
   transition:color .2s;position:relative;
@@ -175,19 +175,58 @@ svg{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-l
 .fact-label{color:var(--text-faint);text-transform:uppercase;letter-spacing:1px;font-size:12px;padding-top:2px;}
 .fact-value{color:var(--text);text-align:right;font-weight:500;}
 
-/* ---------- Skills ---------- */
-.skills{padding:100px 0;background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.skills-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:50px;}
-.skills-col-title{
-  font-family:var(--serif);font-size:19px;font-weight:600;margin-bottom:20px;color:var(--accent);
-  padding-bottom:14px;border-bottom:1px solid var(--border);
+/* ---------- Services ---------- */
+.services{padding:100px 0;background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:50px;}
+.service-card{
+  border:1px solid var(--border);padding:34px 32px;transition:border-color .25s,transform .25s;
+  background:rgba(242,237,228,0.015);
 }
-.skill-list li{
-  display:flex;align-items:flex-start;gap:12px;padding:12px 0;font-size:14.5px;color:var(--text-dim);
-  border-bottom:1px solid var(--border);
+.service-card:hover{border-color:var(--border-strong);transform:translateY(-3px);}
+.service-icon{
+  width:44px;height:44px;border:1px solid var(--border-strong);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
 }
-.skill-list li:last-child{border-bottom:none;}
-.skill-ic{width:18px;height:18px;flex-shrink:0;margin-top:2px;color:var(--green-light);}
+.service-icon svg{width:22px;height:22px;}
+.service-card h3{font-family:var(--serif);font-size:19px;font-weight:600;margin-bottom:10px;color:var(--text);}
+.service-desc{color:var(--text-dim);font-size:14px;margin-bottom:18px;line-height:1.6;}
+.service-list{border-top:1px solid var(--border);padding-top:14px;}
+.service-list li{
+  position:relative;padding:6px 0 6px 18px;color:var(--text-dim);font-size:13.5px;
+}
+.service-list li::before{
+  content:'';position:absolute;left:0;top:14px;width:6px;height:1px;background:var(--green-light);
+}
+
+/* ---------- Solutions / sample architectures ---------- */
+.solutions{padding:100px 0;}
+.solutions-intro{color:var(--text-dim);font-size:16px;max-width:620px;margin-top:-6px;margin-bottom:60px;}
+.diagram-block{margin-bottom:80px;}
+.diagram-block:last-child{margin-bottom:0;}
+.diagram-heading{font-family:var(--serif);font-size:21px;font-weight:600;margin-bottom:6px;color:var(--text);}
+.diagram-caption{color:var(--text-faint);font-size:13.5px;margin-bottom:40px;max-width:560px;}
+
+.org-chart{display:flex;flex-direction:column;align-items:center;}
+.org-node{
+  border:1px solid var(--border-strong);padding:16px 28px;text-align:center;
+  background:rgba(242,237,228,0.02);border-radius:2px;
+}
+.org-node .node-title{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--text);}
+.org-node .node-sub{font-size:11.5px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-top:5px;}
+.org-link{width:1px;height:30px;background:var(--border-strong);flex-shrink:0;}
+.org-children{display:flex;width:100%;position:relative;}
+.org-children::before{content:'';position:absolute;top:0;height:1px;background:var(--border-strong);}
+.org-children.cols-2::before{left:25%;right:25%;}
+.org-children.cols-3::before{left:16.666%;right:16.666%;}
+.org-child{flex:1;display:flex;flex-direction:column;align-items:center;padding:0 14px;}
+.org-card{
+  width:100%;border:1px solid var(--border);padding:20px;text-align:left;
+  background:rgba(242,237,228,0.015);transition:border-color .25s,transform .25s;
+}
+.org-card:hover{border-color:var(--border-strong);transform:translateY(-2px);}
+.org-card h4{font-family:var(--serif);font-size:16px;margin-bottom:9px;color:var(--accent);}
+.org-card p{font-size:13px;color:var(--text-dim);line-height:1.55;}
+.org-card p + p{margin-top:4px;color:var(--text-faint);}
 
 /* ---------- Experience timeline ---------- */
 .experience{padding:100px 0;}
@@ -312,7 +351,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-l
   .hero-inner{grid-template-columns:1fr;gap:40px;}
   .hero-visual{order:-1;max-width:340px;margin:0 auto;}
   .about-grid{grid-template-columns:1fr;gap:50px;}
-  .skills-columns{grid-template-columns:1fr;gap:34px;}
+  .services-grid{grid-template-columns:1fr;gap:20px;}
   .cert-grid{grid-template-columns:repeat(2,1fr);}
   .main-nav{
     position:fixed;top:84px;left:0;right:0;bottom:0;
@@ -328,11 +367,17 @@ svg{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-l
   .header-inner{height:70px;}
   .hero{padding-top:40px;}
   .hero-inner{padding-bottom:50px;}
-  .about,.skills,.experience,.certifications{padding:70px 0;}
+  .about,.services,.solutions,.experience,.certifications{padding:70px 0;}
   .contact-cta{padding:80px 0;}
   .cert-grid{grid-template-columns:1fr;}
   .contact-links{flex-direction:column;gap:18px;align-items:center;}
   .btn span.icon-download{display:none;}
+  .service-card{padding:26px 22px;}
+  .diagram-block{margin-bottom:56px;}
+  .org-node{padding:14px 18px;width:100%;max-width:320px;}
+  .org-children{flex-direction:column;align-items:center;gap:26px;}
+  .org-children::before{display:none;}
+  .org-child{padding:0;width:100%;max-width:320px;}
   .header-inner .btn-sm{padding:10px 14px;font-size:11px;}
   .lang-btn{padding:8px 10px;font-size:11px;}
   .modal{padding:30px 22px;}
