@@ -481,7 +481,8 @@ contactForm.addEventListener('submit', async (e) => {
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify(Object.fromEntries(new FormData(contactForm))),
     });
-    if (!res.ok) throw new Error('request failed');
+    const data = await res.json().catch(() => null);
+    if (!res.ok || !data || String(data.success) !== 'true') throw new Error('request failed');
 
     modalStatus.className = 'modal-status modal-status-ok';
     modalStatus.textContent = t('modal.success');
