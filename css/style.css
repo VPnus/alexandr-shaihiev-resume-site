@@ -166,7 +166,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-l
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size:26px 26px;
 }
-.hero-graphic-svg{width:48%;height:auto;position:relative;z-index:1;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.35));}
+.hero-graphic-svg{width:64%;height:auto;position:relative;z-index:1;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.4));}
 .frame-monogram{
   position:absolute;bottom:16px;left:16px;z-index:2;
   font-family:var(--serif);font-size:13px;letter-spacing:3px;color:rgba(242,237,228,0.7);
