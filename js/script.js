@@ -205,7 +205,10 @@ const translations = {
     'modal.yourEmail': 'Ваш email для ответа',
     'modal.message': 'Сообщение',
     'modal.send': 'Отправить',
-    'modal.note': 'Откроется ваше почтовое приложение с уже готовым письмом — останется нажать «Отправить».',
+    'modal.note': 'Сообщение придёт мне на почту напрямую — открывать почтовый клиент не нужно.',
+    'modal.sending': 'Отправка…',
+    'modal.success': 'Готово! Сообщение отправлено, отвечу в ближайшее время.',
+    'modal.error': 'Не отправилось. Напишите напрямую:',
   },
   en: {
     'nav.about': 'About',
@@ -387,7 +390,10 @@ const translations = {
     'modal.yourEmail': 'Your email (for a reply)',
     'modal.message': 'Message',
     'modal.send': 'Send',
-    'modal.note': "This opens your email app with the message ready — just hit “Send” there.",
+    'modal.note': "Your message goes straight to my inbox — no email app needed.",
+    'modal.sending': 'Sending…',
+    'modal.success': "Sent! I'll get back to you shortly.",
+    'modal.error': "Couldn't send it. Email me directly:",
   }
 };
 
@@ -426,8 +432,16 @@ const modalClose = document.getElementById('modalClose');
 const contactForm = document.getElementById('contactForm');
 const senderEmail = document.getElementById('senderEmail');
 const messageText = document.getElementById('messageText');
+const modalSubmit = document.getElementById('modalSubmit');
+const modalStatus = document.getElementById('modalStatus');
 
 const CONTACT_EMAILS = ['amosemptines@gmail.com', 'amosemptines@yandex.ru'];
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/amosemptines@gmail.com';
+
+function t(key) {
+  const lang = localStorage.getItem('resumeLang') === 'en' ? 'en' : 'ru';
+  return translations[lang][key] || '';
+}
 
 function openModal() {
   contactModal.classList.add('open');
@@ -451,19 +465,34 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && contactModal.classList.contains('open')) closeModal();
 });
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const from = senderEmail.value.trim();
   const message = messageText.value.trim();
   if (!from || !message) return;
 
-  const subject = encodeURIComponent(`Сообщение с сайта-резюме от ${from}`);
-  const body = encodeURIComponent(`${message}\n\n---\nОт: ${from}`);
-  const mailtoLink = `mailto:${CONTACT_EMAILS.join(',')}?subject=${subject}&body=${body}`;
+  modalSubmit.disabled = true;
+  modalStatus.className = 'modal-status';
+  modalStatus.textContent = t('modal.sending');
 
-  window.location.href = mailtoLink;
-  closeModal();
-  contactForm.reset();
+  try {
+    const res = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(contactForm))),
+    });
+    if (!res.ok) throw new Error('request failed');
+
+    modalStatus.className = 'modal-status modal-status-ok';
+    modalStatus.textContent = t('modal.success');
+    contactForm.reset();
+    setTimeout(closeModal, 1800);
+  } catch (err) {
+    modalStatus.className = 'modal-status modal-status-error';
+    modalStatus.innerHTML = `${t('modal.error')} <a href="mailto:${CONTACT_EMAILS[0]}">${CONTACT_EMAILS[0]}</a>`;
+  } finally {
+    modalSubmit.disabled = false;
+  }
 });
 
 // ---------- Terminal demo ----------

@@ -572,16 +572,22 @@
     <form id="contactForm" class="contact-form" novalidate>
       <label class="form-field">
         <span data-i18n="modal.yourEmail">Ваш email для ответа</span>
-        <input type="email" id="senderEmail" required placeholder="you@example.com">
+        <input type="email" id="senderEmail" name="email" required placeholder="you@example.com">
       </label>
       <label class="form-field">
         <span data-i18n="modal.message">Сообщение</span>
-        <textarea id="messageText" rows="5" required></textarea>
+        <textarea id="messageText" name="message" rows="5" required></textarea>
       </label>
-      <button type="submit" class="btn btn-primary modal-submit">
+      <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="_subject" value="Сообщение с сайта-резюме">
+      <input type="hidden" name="_cc" value="amosemptines@yandex.ru">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit" class="btn btn-primary modal-submit" id="modalSubmit">
         <span data-i18n="modal.send">Отправить</span> <span class="arrow">&#8594;</span>
       </button>
-      <p class="modal-note" data-i18n="modal.note">Откроется ваше почтовое приложение с уже готовым письмом — останется нажать «Отправить».</p>
+      <p class="modal-status" id="modalStatus" role="status" aria-live="polite"></p>
+      <p class="modal-note" data-i18n="modal.note">Сообщение придёт мне на почту напрямую — открывать почтовый клиент не нужно.</p>
     </form>
   </div>
 </div>
