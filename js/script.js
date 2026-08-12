@@ -201,7 +201,7 @@ const translations = {
 
     'modal.eyebrow': 'НАПИСАТЬ МНЕ',
     'modal.title': 'Свяжитесь со мной',
-    'modal.desc': 'Сообщение уйдёт сразу на два адреса:',
+    'modal.desc': 'Сообщение придёт на почту:',
     'modal.yourEmail': 'Ваш email для ответа',
     'modal.message': 'Сообщение',
     'modal.send': 'Отправить',
@@ -386,7 +386,7 @@ const translations = {
 
     'modal.eyebrow': 'GET IN TOUCH',
     'modal.title': "Let's connect",
-    'modal.desc': 'Your message will go to both addresses at once:',
+    'modal.desc': 'Your message will go straight to my inbox:',
     'modal.yourEmail': 'Your email (for a reply)',
     'modal.message': 'Message',
     'modal.send': 'Send',
@@ -435,7 +435,7 @@ const messageText = document.getElementById('messageText');
 const modalSubmit = document.getElementById('modalSubmit');
 const modalStatus = document.getElementById('modalStatus');
 
-const CONTACT_EMAILS = ['amosemptines@gmail.com', 'amosemptines@yandex.ru'];
+const CONTACT_EMAILS = ['amosemptines@gmail.com'];
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/amosemptines@gmail.com';
 
 function t(key) {
