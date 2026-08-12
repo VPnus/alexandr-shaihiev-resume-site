@@ -483,8 +483,10 @@ contactForm.addEventListener('submit', async (e) => {
 
   try {
     await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-      from_email: from,
+      name: from,
+      email: from,
       message: message,
+      title: 'Сообщение с сайта-резюме',
     });
 
     modalStatus.className = 'modal-status modal-status-ok';
