@@ -436,7 +436,11 @@ const modalSubmit = document.getElementById('modalSubmit');
 const modalStatus = document.getElementById('modalStatus');
 
 const CONTACT_EMAILS = ['amosemptines@gmail.com'];
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/amosemptines@gmail.com';
+const EMAILJS_PUBLIC_KEY = '97qGeL6zcl9vwHPRt';
+const EMAILJS_SERVICE_ID = 'service_xvbibmj';
+const EMAILJS_TEMPLATE_ID = 'template_qt6ol2a';
+
+if (window.emailjs) emailjs.init(EMAILJS_PUBLIC_KEY);
 
 function t(key) {
   const lang = localStorage.getItem('resumeLang') === 'en' ? 'en' : 'ru';
@@ -469,20 +473,19 @@ contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const from = senderEmail.value.trim();
   const message = messageText.value.trim();
+  const honey = contactForm.querySelector('[name="_honey"]').value.trim();
   if (!from || !message) return;
+  if (honey) return; // spam bot filled the hidden field — silently drop
 
   modalSubmit.disabled = true;
   modalStatus.className = 'modal-status';
   modalStatus.textContent = t('modal.sending');
 
   try {
-    const res = await fetch(FORM_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(Object.fromEntries(new FormData(contactForm))),
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      from_email: from,
+      message: message,
     });
-    const data = await res.json().catch(() => null);
-    if (!res.ok || !data || String(data.success) !== 'true') throw new Error('request failed');
 
     modalStatus.className = 'modal-status modal-status-ok';
     modalStatus.textContent = t('modal.success');
