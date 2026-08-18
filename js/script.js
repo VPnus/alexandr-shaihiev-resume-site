@@ -141,7 +141,7 @@ const translations = {
     'experience.eyebrow': 'ОПЫТ РАБОТЫ',
     'experience.title': 'Карьерный путь.',
 
-    'exp.1.date': 'Июнь 2025 — настоящее время',
+    'exp.1.date': 'Июнь 2025 — август 2026',
     'exp.1.role': 'Специалист по информационной безопасности',
     'exp.1.company': 'Gazinformservice Certification Center LLC — Санкт-Петербург',
     'exp.1.b1': 'Развёртывание и поддержка защитной сетевой инфраструктуры: NGFW, зашифрованные VPN/крипто-шлюзы для корпоративных клиентов',
@@ -196,7 +196,7 @@ const translations = {
     'edu.desc': 'Информационные технологии и машиностроение — Диплом специалиста, 2017. Квалификация: наладчик станков с ЧПУ и манипуляторов',
 
     'contact.title': 'ОБСУДИМ ВАШ ПРОЕКТ УДАЛЁННО',
-    'contact.text': 'Работаю с бизнесом любого размера и региона — разовые задачи, проектная работа или постоянное сопровождение.',
+    'contact.text': 'Разовые задачи, проектная работа или постоянное сопровождение.',
     'contact.btn': 'Написать мне',
 
     'modal.eyebrow': 'НАПИСАТЬ МНЕ',
@@ -326,7 +326,7 @@ const translations = {
     'experience.eyebrow': 'WORK EXPERIENCE',
     'experience.title': 'Career Path.',
 
-    'exp.1.date': 'Jun 2025 — Present',
+    'exp.1.date': 'Jun 2025 — Aug 2026',
     'exp.1.role': 'Information Security Specialist',
     'exp.1.company': 'Gazinformservice Certification Center LLC — Saint Petersburg',
     'exp.1.b1': 'Deploy and maintain enterprise network security infrastructure, including next-generation firewalls and encrypted VPN/crypto gateways for corporate clients',
@@ -381,7 +381,7 @@ const translations = {
     'edu.desc': 'Information Technology & Mechanical Engineering — Associate Degree, 2017. Qualification: CNC Machine and Manipulator Setter',
 
     'contact.title': "LET'S DISCUSS YOUR PROJECT REMOTELY",
-    'contact.text': 'Working with businesses of any size and region — one-off tasks, project work, or ongoing support.',
+    'contact.text': 'One-off tasks, project work, or ongoing support.',
     'contact.btn': 'Get in Touch',
 
     'modal.eyebrow': 'GET IN TOUCH',
